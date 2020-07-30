@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --olive: #37393a;
+    --blue: #77b6ea;
+    --grey: #c7d3dd;
+    --brown: #d6c9c9;
+    --white: #fff;
+    --black: #000;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.header{
+width: 100vw;
+height: 15vh;
+background-color: var(--blue);
+color: var(--black);
+}
+
+.header nav{
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-bottom: 0.8em;
+}
+
+.header nav ul li a{
+    padding: 10px;
+    border-radius: 5px;
+    transition: all .8s ease;
+}
+
+.header nav ul li a:hover{
+    color: var(--olive);
+    background-color: var(--grey);
+}
+
+.logout:hover{
+    color: var(--blue) !important;
+    background-color: var(--black) !important;
+}
+
+.main{
+width: 100vw;
+height: 75vh;
+background-color: var(--brown);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.content{
+    width: 85%;
+}
+
+.content h3{
+    margin: 10px 0px;
+}
+
+.content p {
+    margin-bottom: 10px;
+}
+
+.project-name{
+    color: var(--olive);
+}
+
+.white{
+    color: var(--white);
+}
+
+.footer{
+width: 100vw;
+height: 10vh;
+background-color: var(--olive);
+color: var(--white);
+display: flex;
+align-items: center;
+justify-content: flex-end;
+padding: 5px;
+}
+

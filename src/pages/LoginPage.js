@@ -10,9 +10,10 @@ function LoginPage() {
     return (
         <div>
             THis is LoginPage
+            <br />
             <button onClick={() => {
                 auth.dispatch({ type: "login" })
-                history.push("/dashboard")
+                history.replace("/dashboard")
             }} >Login</button>
         </div>
     )

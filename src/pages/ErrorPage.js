@@ -7,7 +7,8 @@ function ErrorPage() {
             <h2>
                 Error 404 not found
             </h2>
-            <Link to="/">Home Page</Link>
+            <br />
+            Return to <Link to="/">Home Page</Link>
         </Fragment>
     )
 }
