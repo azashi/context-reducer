@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AuthContext from './state/AuthContext'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import routes from './routes'
+import ProtectedRoute from './routes/ProtectedRoute'
+import ErrorPage from './pages/ErrorPage'
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContext>
+      <Router>
+        <Switch>
+          {routes.publicRoutes
+            .map(({ path, component }) => (
+              <Route key={path} exact path={path} component={component} />
+            ))
+          }
+          {routes.protectedRoutes
+            .map(({ path, component }) => (
+              <ProtectedRoute key={path} exact path={path} component={component} />
+            ))
+          }
+
+          <Route component={ErrorPage} />
+        </Switch>
+      </Router>
+    </AuthContext>
+
   );
 }
 
