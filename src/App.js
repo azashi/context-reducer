@@ -12,7 +12,7 @@ function App() {
 
   return (
     <AuthContext>
-      <Router>
+      <Router basename="/context-reducer">
         <Layout>
           <Switch>
             {routes.publicRoutes
@@ -25,7 +25,7 @@ function App() {
                 <ProtectedRoute key={path} exact path={path} component={component} />
               ))
             }
-            <Route component={ErrorPage} />
+            <Route path="/*" component={ErrorPage} />
           </Switch>
         </Layout>
       </Router>

@@ -4,7 +4,7 @@ This project implements useContext and useReducer hooks for global auth state of
 Routes are protected for private pages and login details are stored in localStorage for persistence.
 
 ## Deployed at
-coming soon ...
+[https://azashi.github.io/context-reducer/](https://azashi.github.io/context-reducer/)
 
 ## App Image
 
@@ -14,16 +14,16 @@ coming soon ...
 
 In the project directory, you can run:
 
-### `yarn`
+### `npm i`
 
 Installs all the necessary dependencies.
 
-### `yarn start`
+### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `yarn build`
+### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
 
