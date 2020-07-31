@@ -25,7 +25,7 @@ function Header() {
                     <Link to=""
                         className="logout"
                         onClick={() => {
-                            auth.dispatch({ type: "logout" })
+                            auth.dispatch({ type: "logout", payload: '' })
                             history.push("/login")
                         }}>Log Out</Link>
                 </li>

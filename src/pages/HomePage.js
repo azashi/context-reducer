@@ -14,6 +14,9 @@ function HomePage() {
             <p>
                 To consume auth state from global state, <span className="white">useContext</span> hook is used and to change auth state from a component, dispatch method from <span className="white">useReducer</span> hook is called.
             </p>
+            <p>
+                Repo on <a href="https://github.com/azashi/context-reducer" target="_blank" rel="noopener noreferrer"><span className="blue">GitHub</span></a>
+            </p>
         </div>
     )
 }
