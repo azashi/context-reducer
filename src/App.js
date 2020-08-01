@@ -5,6 +5,7 @@ import routes from './routes'
 import ProtectedRoute from './routes/ProtectedRoute'
 import ErrorPage from './pages/ErrorPage'
 import Layout from './layout'
+import { BASE_PATH } from './routes/PATHS'
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <AuthContext>
-      <Router basename="/context-reducer">
+      <Router basename={BASE_PATH}>
         <Layout>
           <Switch>
             {routes.publicRoutes

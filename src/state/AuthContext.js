@@ -1,7 +1,10 @@
 import React, { useReducer } from 'react'
 import ls, { hash } from './localStorage'
+import { AUTH_ACTIONS } from './ACTION_TYPES'
 
 export const Auth = React.createContext()
+
+const { LOGIN, LOGOUT, SIGNUP } = AUTH_ACTIONS
 
 const initialState = {
     isLoggedIn: false,
@@ -15,7 +18,7 @@ function reducer(state, action) {
 
     switch (action.type) {
 
-        case 'login':
+        case LOGIN:
             const lsUser = ls.get()
             if (lsUser?.username === username && lsUser?.password === hash(password)) {
                 return { ...state, isLoggedIn: true, username, password }
@@ -23,10 +26,10 @@ function reducer(state, action) {
                 return { ...state, isLoggedIn: false }
             }
 
-        case 'logout':
+        case LOGOUT:
             return { ...state, ...initialState }
 
-        case 'signup':
+        case SIGNUP:
             ls.set(action.payload)
             return { ...state, username, password }
 

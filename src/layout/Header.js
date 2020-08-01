@@ -2,8 +2,11 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { Auth } from '../state/AuthContext'
 import { useHistory } from 'react-router-dom'
+import { AUTH_ACTIONS } from '../state/ACTION_TYPES'
 
 function Header() {
+
+    const { LOGOUT } = AUTH_ACTIONS
 
     const auth = useContext(Auth)
     const history = useHistory()
@@ -25,7 +28,7 @@ function Header() {
                     <Link to=""
                         className="logout"
                         onClick={() => {
-                            auth.dispatch({ type: "logout", payload: '' })
+                            auth.dispatch({ type: LOGOUT, payload: '' })
                             history.push("/login")
                         }}>Log Out</Link>
                 </li>
